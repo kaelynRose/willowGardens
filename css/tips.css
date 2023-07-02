@@ -1,0 +1,14 @@
+/*****************
+    Positioning
+******************/
+main {grid-template-columns: repeat(9, 1fr);}
+.headline {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 7;
+}
+#light, #soil {grid-row: 2 / span 1;}
+#size, #plants {grid-row: 3 / span 1;}
+#harvesting, #bugs {grid-row: 4 / span 1;}
+#water, #feeding {grid-row: 5 / span 1;}
+#light, #size, #harvesting, #water {grid-column: 2 / span 3;}
+#soil, #plants, #bugs, #feeding {grid-column: 6 / span 3;}

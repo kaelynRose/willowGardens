@@ -1,0 +1,223 @@
+/*
+    CSS Reset
+    Adopted from: http://meyerweb.com/eric/tools/css/reset/
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    line-height: 1.7;
+}
+
+:root {
+    --PRIMARY-GREEN: #556B2F;       /* Header nav and footer */
+    --SECONDARY-PINK: #C171A4;      /* Button background */
+    --SECONDARY-VARIANT: #E0B8D1;   /* Highlight areas */
+    --PINK-WHITE: #F7EDF4;          /* Background */
+    --SUCCESS: #5CB14E;             /* Success text and highlighting */
+    --ERROR: #B14E4E;               /* Error text and highlighting */
+    --STANDARD-WHITE: #FFFFFF;      /* Standard white */
+    --NOT-BLACK: #23101C;           /* Text on light background */
+}
+
+/***** TEXT SETTINGS *****/
+/** Font Styles
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Shadows Into Light Two', cursive;
+**/
+/* Main Heading */
+h1 {
+    font-size: 48px;
+    font-family: 'Shadows Into Light Two', cursive;
+    letter-spacing: .04em;
+    font-weight: 400;
+    line-height: 1.2;
+}
+/* Secondary Heading */
+h2 {
+    font-size: 40px;
+    font-family: 'Shadows Into Light Two', cursive;
+    letter-spacing: .02em;
+    font-weight: 400;
+    line-height: 1.2;
+}
+/* Sub Heading */
+h3 {
+    font-size: 32px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+/* Titles */
+.title {
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 1.2;
+}
+/* Subtitle */
+.subtitle {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    line-height: 1.2;
+}
+/* Body Text */
+.text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .03em;
+    line-height: 1.8;
+}
+/* Captions */
+.caption {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .03em;
+    line-height: 1.5;
+}
+
+/******************
+    Header Styles
+******************/
+#logo-head {
+    height: 32px;
+}
+#logo-link {
+    grid-column: 2 / span 2;
+}
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    color: var(--STANDARD-WHITE);
+}
+.skip-link:focus,
+.skip-link:active {
+    left: 0;
+}
+.header-bar {
+    background-color: var(--PRIMARY-GREEN);
+    height: 70px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 70px;
+    grid-gap: 20px;
+    align-items: center;
+}
+nav {
+    grid-column: 4 / span 5;
+}
+ul {
+    display: flex;
+    list-style: none;
+}
+nav li a {
+    color: var(--STANDARD-WHITE);
+    display: block;
+    text-decoration: none;
+    padding: 0 2rem 0 0;
+}
+li a:hover,
+li a:focus {
+    text-decoration: underline;
+}
+.hero-image {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+.current-page {
+    text-decoration: underline;
+    color: white;
+}
+
+
+/******************
+    Main Styles
+******************/
+html {height: 100%;}
+body {
+    background-color: var(--PINK-WHITE);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--NOT-BLACK);
+}
+main {
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 20px;
+}
+footer {
+    flex-shrink: 0;
+    color: var(--STANDARD-WHITE);
+}
+.contact-info {
+    margin: .5rem auto;
+    width: fit-content;
+}
+.contact-info * {
+    margin: 0 2rem;
+    color: var(--STANDARD-WHITE);
+    text-decoration: none;
+}
+.contact-info *:hover,
+.contact-info *:focus {text-decoration: underline;}
+footer {
+    background-color: var(--PRIMARY-GREEN);
+    width: 100%;
+}
+.center-text { text-align: center; }
+.headline { margin: 2rem 0; }
+.headline p {margin-top: 1rem;}
+section {
+    padding: 50px 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: auto 1fr;
+}
+.custom-button {
+    background-color: var(--SECONDARY-PINK);
+    border: 3px solid var(--PINK-WHITE);
+    border-radius: 25px;
+    color: var(--STANDARD-WHITE);
+    text-decoration: none;
+    line-height: 64px;
+}
+.custom-button:hover,
+.custom-button:focus {
+    background-color: var(--PRIMARY-GREEN);
+    transition: .3s;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#social-links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+

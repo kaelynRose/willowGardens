@@ -1,0 +1,54 @@
+/*****************
+    Positioning
+******************/
+.headline {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 8;
+}
+#garden {grid-column: 2 / span 4;}
+#plot {grid-column: 6 / span 4;}
+#garden, #plot {grid-row: 2 / span 1;}
+#cost {
+    grid-column: 2 / span 8;
+    grid-row: 3 / span 1;
+}
+#form-content {
+    grid-column: 4 / span 4;
+    grid-row: 4 / span 1;
+    margin-bottom: 50px;
+}
+/*****************
+    Form
+******************/
+#form-content {
+    background-color: var(--SECONDARY-VARIANT);
+    padding: 1.5rem;
+    border-radius: 25px;
+    width: 700px;
+}
+#form-content .custom-button {
+    margin: 0 auto;
+    display: block;
+    width: 75%;
+    line-height: 48px;
+}
+fieldset {
+    margin: 2rem auto;
+    border: none;
+}
+.form-caption {margin-top: 1rem;}
+.block-label {display: block;}
+.form-group {
+    display: inline-block;
+    width: 45%;
+    margin: 1rem 0;
+}
+.form-group:nth-of-type(even) {margin-left: 1.5rem;}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    margin: .5rem 0;
+}

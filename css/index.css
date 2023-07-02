@@ -1,0 +1,76 @@
+/*****************
+    Positioning
+******************/
+.sub-menu, .headline {grid-column: 2 / span 8;}
+.sub-menu {grid-row: 1 / span 1;}
+.headline {grid-row: 2 / span 1;}
+#about, #garden, #volunteer { grid-column: 1 / span 10; }
+#about {grid-row: 3 / span 1;}
+#garden {grid-row: 4 / span 1;}
+#volunteer {grid-row: 5 / span 1;}
+#about h2, #about p, #volunteer h2, #volunteer p {grid-column: 6 / span 4;}
+#garden h2, #garden p {grid-column: 3 / span 6;}
+#about h2, #garden h2, #volunteer h2 {grid-row: 1 / span 1;}
+#about p, #garden p, #volunteer p {grid-row: 2 / span 1;}
+#garden .custom-button {
+    grid-column: 5 / span 2;
+    grid-row: 3 / span 1;
+}
+#volunteer .custom-button {
+    grid-column: 6 / span 4;
+    grid-row: 3 / span 1;
+}
+#volunteer .partner-image {grid-row: 1 / span 3;}
+.partner-image {
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 2;
+}
+
+/******************
+    Sub Menu
+******************/
+.sub-menu {
+    margin: 0 auto;
+    position: relative;
+    top: -60px;
+    background-color: var(--PINK-WHITE);
+}
+.sub-menu ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    grid-row: auto;
+}
+.sub-button {
+    background-color: var(--SECONDARY-PINK);
+    border: 10px solid var(--PINK-WHITE);
+    width: 252px;
+    height: 224px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: 1fr auto;
+    color: var(--STANDARD-WHITE);
+    text-decoration: none;
+}
+.sub-button:hover {
+    background-color: var(--PRIMARY-GREEN);
+    transition: .3s;
+}
+
+.sub-menu-icon {
+    padding: 1rem;
+    margin: 0 auto;
+    height: calc(100% - 2rem);
+}
+
+/*****************
+    Other Styles
+******************/
+section {grid-template-columns: repeat(10, 1fr);}
+.partner-image {
+    display: block;
+    object-fit: cover;
+    justify-self: stretch;
+    height: 420px;
+}
+#garden {background-color: var(--SECONDARY-VARIANT);}
